@@ -8,6 +8,8 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="<?php echo m_turl().'css/responsive-tables.css'?>">
     <style type="text/css">
         body {
             padding-top: 50px;
@@ -66,5 +68,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.dataTable').DataTable();
+});
+
+$('.dataTable tbody').on( 'click', 'tr', function () {
+	if ( $(this).hasClass('selected') ) {
+		$(this).removeClass('selected');
+	}
+	else {
+		$('.dataTable tr.selected').removeClass('selected');
+		$(this).addClass('selected');
+	}
+} );
+
+$('.dataTable tbody').on( 'dblclick', 'tr', function () {
+
+});
+</script>
   </body>
 </html>
