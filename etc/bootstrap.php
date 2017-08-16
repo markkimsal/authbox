@@ -47,13 +47,14 @@ $authorizer = _make('authorizer');
 _connect('authorize',            $authorizer);
 
 //events
-#_iCanHandle('access.denied',        'metrou/login.php::accessDenied');
-#_iCanHandle('authenticate.success', 'metrou/login.php::authSuccess');
-#_iCanHandle('authenticate.failure', 'metrou/login.php::authFailure');
+_connect('access.denied',        'metrou/login.php::accessDenied');
+_connect('authenticate.success', 'metrou/login.php::authSuccess');
+_connect('authenticate.failure', 'metrou/login.php::authFailure');
+
 
 //things
-#_didef('user',           'metrou/user.php');
-#_didef('session',        'metrou/sessiondb.php');
+_didef('user',           'metrou/user.php');
+_didef('session',        'metrou/sessiondb.php');
 //end metrou
 
 
