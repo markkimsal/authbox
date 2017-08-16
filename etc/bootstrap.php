@@ -56,14 +56,14 @@ _connect('authorize',            $authorizer);
 #_didef('session',        'metrou/sessiondb.php');
 //end metrou
 
-//_didef('taxcalc',  'utils/taxcaclculatorv1.php');
-//_didef('taxcalc',  '\FER\Utils\Taxcalculator');
 
 _set('template_basedir', 'templates/');
 _set('template_baseuri', 'templates/');
 _set('template_name',    'webapp01');
-_set('site_title',       'Hello Metro');
+_set('site_title',       'Authbox');
+_set('noreply_email',    'noreply@example.com');
 
+_set('auto_route_to_main', FALSE);
 _set('route_rules',  array() );
 
 _set('route_rules',
