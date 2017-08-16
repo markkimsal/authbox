@@ -38,8 +38,13 @@ _didef('dataitem', 'metrodb/dataitem.php');
 //end metrodb
 
 //metrou
-#_iCanHandle('authenticate', 'metrou/authenticator.php');
-#_iCanHandle('authorize',    'metrou/authorizer.php::requireLogin');
+_connect('authenticate', 'metrou/authenticator.php');
+
+_didef('authorizer', 'metrou/authorizer.php',
+    array('metrou', '/login', '/dologin', '/logout', '/dologout', '/register', '/token', '/oauth', '/authorize', '/test')
+);
+$authorizer = _make('authorizer');
+_connect('authorize',            $authorizer);
 
 //events
 #_iCanHandle('access.denied',        'metrou/login.php::accessDenied');
