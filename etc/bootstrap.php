@@ -60,7 +60,7 @@ _didef('session',        'metrou/sessiondb.php');
 
 _set('template_basedir', 'templates/');
 _set('template_baseuri', 'templates/');
-_set('template_name',    'webapp01');
+_set('template_name',    'authbox');
 _set('site_title',       'Authbox');
 _set('noreply_email',    'noreply@example.com');
 
