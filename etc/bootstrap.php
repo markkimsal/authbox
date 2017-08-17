@@ -22,7 +22,10 @@ _iCanHandle('output',    'metrofw/template.php', 3);
 #raintpl
 #_iCanHandle('template.main',    'template/rain.php::template', 3);
 
-_iCanHandle('exception', 'metrofw/exdump.php::onException');
+//_connect('exception', 'metrofw/exdump.php::onException');
+if (_get('env') == 'dev') {
+	_connect('exception', 'main/whoopsexception.php');
+}
 _iCanHandle('hangup',    'metrofw/output.php');
 
 _didef('request',        'metrofw/request.php');
