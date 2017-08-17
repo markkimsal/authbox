@@ -86,5 +86,44 @@ _set('route_rules',
 	array_merge(array('/:appName/:modName/:actName/:arg'=>array(  )),
 	_get('route_rules')));
 
-// paste at bottom etc/bootsrap.php
-_iCanHandle('hangup',  'example/helloworld.php');
+_set('route_rules',
+	array_merge(array('/register/:actName/:arg'=>array( 'appName'=>'metrou', 'modName'=>'register' )),
+	_get('route_rules')));
+
+_set('route_rules',
+	array_merge(array('/register/:actName/:arg'=>array( 'appName'=>'metrou', 'modName'=>'register' )),
+	_get('route_rules')));
+
+_set('route_rules',
+	array_merge(array('/register/verify/:arg'=>array( 'appName'=>'metrou', 'modName'=>'verify' )),
+	_get('route_rules')));
+
+_set('route_rules',
+	array_merge(array('/register/password/:actName/:arg'=>array( 'appName'=>'metrou', 'modName'=>'password' )),
+	_get('route_rules')));
+
+_set('route_rules',
+	array_merge(array('/login'=>array( 'appName'=>'metrou', 'modName'=>'login', 'actName'=>'main' )),
+	_get('route_rules')));
+
+#oauth2
+_set('route_rules',
+	array_merge(array('/userinfo'=>array( 'appName'=>'oauth', 'modName'=>'userinfo', 'actName'=>'main' )),
+	_get('route_rules')));
+
+_set('route_rules',
+	array_merge(array('/.well-known/openid-configuration'=>array( 'appName'=>'oauth', 'modName'=>'openid', 'actName'=>'config' )),
+	_get('route_rules')));
+
+_set('route_rules',
+	array_merge(array('/authorize'=>array( 'appName'=>'oauth', 'modName'=>'authorize', 'actName'=>'main' )),
+	_get('route_rules')));
+
+_set('route_rules',
+	array_merge(array('/authorize/main/:actName'=>array( 'appName'=>'oauth', 'modName'=>'authorize')),
+	_get('route_rules')));
+
+_set('route_rules',
+	array_merge(array('/token'=>array( 'appName'=>'oauth', 'modName'=>'token', 'actName'=>'main' )),
+	_get('route_rules')));
+
