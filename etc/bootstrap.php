@@ -20,7 +20,7 @@ _iCanHandle('output',    'metrofw/output.php');
 _iCanHandle('output',    'metrofw/template.php', 3);
 
 #raintpl
-_iCanHandle('template.main',    'template/rain.php::template', 3);
+#_iCanHandle('template.main',    'template/rain.php::template', 3);
 
 _iCanHandle('exception', 'metrofw/exdump.php::onException');
 _iCanHandle('hangup',    'metrofw/output.php');
