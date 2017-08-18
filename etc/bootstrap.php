@@ -133,3 +133,25 @@ _set('route_rules',
 	array_merge(array('/token'=>array( 'appName'=>'oauth', 'modName'=>'token', 'actName'=>'main' )),
 	_get('route_rules')));
 
+
+
+if (_get('env') == 'dev' || _get('env') == 'demo') {
+	_connect('template.extraJs', function ($request) {
+
+		if (!$request->isAjax) {
+	echo '<script type=\'text/javascript\' id="__bs_script__">//<![CDATA[
+		document.write("<script async src=\'//HOST:35729/livereload.js\'><\/script>".replace("HOST", "localhost"));
+	//]]></script>
+		';
+		}
+	}, 3);
+
+	_connect('hangup', function() {
+	register_shutdown_function( function() {
+		global $metrofw_start;
+		$log = \_make('logService');
+		$log->debug("Execution time: ".(sprintf("%0.4f", (microtime(1) - $metrofw_start)*1000))." ms.");
+	});
+	}, 3);
+
+}
