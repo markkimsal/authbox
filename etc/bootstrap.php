@@ -19,6 +19,12 @@ _iCanHandle('output',    'metrofw/output.php');
 //will be removed if output.php doesn't think we need HTML output
 _iCanHandle('output',    'metrofw/template.php', 3);
 
+
+_connect('template',          'template/smarty.php::template', 3);
+_connect('template.main',     'template/smarty.php::template', 3);
+
+_connect('template.sparkmsg', 'template/sparkmsg.php::template');
+
 #raintpl
 #_iCanHandle('template.main',    'template/rain.php::template', 3);
 
