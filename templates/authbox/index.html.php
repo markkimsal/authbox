@@ -38,13 +38,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+		  <a class="navbar-brand" href="<?php echo m_appurl();?>"><?php echo _get('site_title');?></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+		  <li><a href="<?php echo m_appurl('clients');?>">Clients</a></li>
+		  <li><a href="<?php echo m_appurl('tokens');?>">Tokens</a></li>
+		  <li><a href="<?php echo m_appurl('users');?>">Users</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -53,13 +53,10 @@
 
 
     <div class="container">
-
-      <div class="starter-template">
-    	<h1>Hello, Metro!</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-      <?php echo Metrofw_Template::parseSection('main'); ?>
+		<div class="starter-template">
+		<h3><?php echo _get('site_title');?></h3>
+		</div><!-- /.row -->
+		<?php echo Metrofw_Template::parseSection('main'); ?>
 
     </div><!-- /.container -->
 
