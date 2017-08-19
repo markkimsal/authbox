@@ -102,6 +102,8 @@
 						Remember me
 					</label>
 					<a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+
+					<input type="hidden" name="redir_url" value="<?php echo $response->redir_url;?>"/>
 					</form>
 				</div>
 <!--
