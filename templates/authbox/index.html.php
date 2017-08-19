@@ -55,6 +55,7 @@
     <div class="container">
 		<div class="starter-template">
 		<h3><?php echo _get('site_title');?></h3>
+		<?php echo Metrofw_Template::parseSection('sparkmsg'); ?>
 		</div><!-- /.row -->
 		<?php echo Metrofw_Template::parseSection('main'); ?>
 
