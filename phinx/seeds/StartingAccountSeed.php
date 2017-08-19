@@ -15,6 +15,7 @@ class StartingAccountSeed extends AbstractSeed
 	public function run() {
 
 		$this->installUser();
+		$this->installAccount();
 	}
 
 
@@ -41,6 +42,25 @@ class StartingAccountSeed extends AbstractSeed
 		];
 
 		$this->insert('user_login', $data);
+	}
 
+	public function installAccount()
+	{
+		//| account_person_id | created_on | updated_on | firstname  | lastname | email  | user_login_id
+		$defaults =  [
+				'created_on'    => time(),
+				'updated_on'    => time(),
+		];
+
+		$data = [
+			$defaults + [
+				'account_person_id' => 1,
+				'firstname'         => 'Root',
+				'lastname'          => 'User',
+				'email'             => 'root@authbox.example.com',
+				'user_login_id'     => 1,
+			],
+		];
+		$this->insert('account_person', $data);
 	}
 }
