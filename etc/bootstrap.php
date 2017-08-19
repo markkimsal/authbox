@@ -60,7 +60,7 @@ _didef('dataitem', 'metrodb/dataitem.php');
 _connect('authenticate', 'metrou/authenticator.php');
 
 _didef('authorizer', 'metrou/authorizer.php',
-    array('metrou', '/login', '/dologin', '/logout', '/dologout', '/register', '/token', '/oauth', '/authorize', '/test')
+    array('metrou', '/login', '/dologin', '/logout', '/dologout', '/register', '/token', '/oauth', '/test')
 );
 $authorizer = _make('authorizer');
 _connect('authorize',            $authorizer);
