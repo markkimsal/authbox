@@ -7,6 +7,12 @@ composer install
  PHINX_DBUSER={...} PHINX_DBPASS={...} php local/bin/phinx seed:run -e development -c phinx/phinx.yml 
 ```
 
+```
+Copy etc/dsn.example.php   to etc/dsn.dev.php
+
+Copy etc/email.example.php to etc/email.dev.php
+```
+
 
 Login
 ===
