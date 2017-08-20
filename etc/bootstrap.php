@@ -41,6 +41,7 @@ _didef('foobar',         (object)array());
 
 _didef('logService',  '\Monolog\Logger', 'webapp');
 _connect('resources', 'setup/log.php');
+_connect('resources', 'setup/config.php');
 _connect('resources', 'setup/oauth.php');
 _didef('crud', 'setup/crud.php');
 _make('crud');

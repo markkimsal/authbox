@@ -4,6 +4,10 @@ class Setup_Oauth {
 
 	public function resources() {
 		$db       = Metrodb_Connector::getHandle(_get('oauth_dsn_handle', 'default'));
+		if (!isset($db->host) ) {
+			//hasn't setup dsn handle for this environment
+			return;
+		}
 		//pdo dsn is like this mysql:host=mariadb;dbname=oauth'
 		$dsn      = 'mysql:host='.$db->host.';dbname='.$db->database;
 		$username = $db->user;
