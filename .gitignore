@@ -7,5 +7,6 @@ composer.lock
 vendor/
 local/
 var/cache/*
+var/log/*
 etc/dsn.*
 etc/email.*
