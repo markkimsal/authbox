@@ -53,8 +53,10 @@ _set('oauth_privatekeyfile', 'etc/ssl/testclient_root_private.key');
 
 //metrodb
 _didef('dataitem', 'metrodb/dataitem.php');
-#Metrodb_Connector::setDsn('default', 'mysql://root:mysql@127.0.0.1:3306/metrodb_test');
+@include('etc/dsn.'._get('env').'.php');
 //end metrodb
+
+@include('etc/email.'._get('env').'.php');
 
 //metrou
 _connect('authenticate', 'metrou/authenticator.php');
