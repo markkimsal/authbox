@@ -47,8 +47,8 @@ _make('crud');
 
 
 _set('oauth_dsn_handle',     'default');
-_set('oauth_publickeyfile',  'etc/ssl/testclient_root_public.key');
-_set('oauth_privatekeyfile', 'etc/ssl/testclient_root_private.key');
+_set('oauth_publickeyfile',  'etc/ssl/exampleserver_root_public.key');
+_set('oauth_privatekeyfile', 'etc/ssl/exampleserver_root_private.key');
 
 
 //metrodb
