@@ -1,0 +1,62 @@
+/* tables */
+/* can remove th/td when chrome fixes bug */
+/* https://code.google.com/p/chromium/issues/detail?id=174167 */
+.table-responsive table thead tr th,
+.table-responsive table tbody tr td,
+.table-responsive table colgroup col {
+  visibility: visible;
+}
+@media screen and (max-width: 989px) {
+  /* can remove th/td when chrome fixes bug */
+  /* https://code.google.com/p/chromium/issues/detail?id=174167 */
+  table thead tr th.tcl-lg,
+  table tbody tr td.tcl-lg,
+  table colgroup col.tcl-lg {
+    display: none;
+    visibility: collapse;
+    width: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* can remove th/td when chrome fixes bug */
+  /* https://code.google.com/p/chromium/issues/detail?id=174167 */
+  table thead tr th.tcl-md,
+  table tbody tr td.tcl-md,
+  table colgroup col.tcl-md {
+    display: none;
+    visibility: collapse;
+    width: 0;
+  }
+  table thead tr th.tcl-lg,
+  table tbody tr td.tcl-lg,
+  table colgroup col.tcl-lg {
+    display: none;
+    visibility: collapse;
+    width: 0;
+  }
+}
+@media screen and (max-width: 639px) {
+  /* can remove th/td when chrome fixes bug */
+  /* https://code.google.com/p/chromium/issues/detail?id=174167 */
+  table colgroup col.tcl-sm,
+  table thead tr th.tcl-sm,
+  table tbody tr td.tcl-sm {
+    display: none;
+    visibility: collapse;
+    width: 0;
+  }
+  table thead tr th.tcl-md,
+  table tbody tr td.tcl-md,
+  table colgroup col.tcl-md {
+    display: none;
+    visibility: collapse;
+    width: 0;
+  }
+  table thead tr th.tcl-lg,
+  table tbody tr td.tcl-lg,
+  table colgroup col.tcl-lg {
+    display: none;
+    visibility: collapse;
+    width: 0;
+  }
+}
