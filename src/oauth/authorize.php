@@ -46,7 +46,7 @@ class Oauth_Authorize {
 		$dataitem->loadExisting();
 
 		$response->set('client',        $dataitem);
-		$response->set('state',         $state);
+//		$response->set('state',         $state);
 		$response->set('scope',         $scope);
 		$response->set('scopeList',     explode(' ', $scope));
 		$response->set('redirect_uri',  $redir);
